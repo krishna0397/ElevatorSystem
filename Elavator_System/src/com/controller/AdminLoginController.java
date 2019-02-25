@@ -65,7 +65,7 @@ public class AdminLoginController {
 			public ModelAndView logoutcheck(HttpServletRequest req,HttpSession session){
 				
 				session.invalidate();
-				return new ModelAndView("login","command",new LoginBean());
+				return new ModelAndView("index","command",new LoginBean());
 			}
 			
 			@RequestMapping("adminhome")

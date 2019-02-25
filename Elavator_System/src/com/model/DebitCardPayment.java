@@ -5,6 +5,7 @@ public class DebitCardPayment {
 	private int order_id;
 	private String debitcardno;
 	private String expdate;
+	private String expyear;
 	private String debitcvv;
 	private String debitname;
 	
@@ -53,6 +54,14 @@ public class DebitCardPayment {
 
 	public void setExpdate(String expdate) {
 		this.expdate = expdate;
+	}
+	
+	public String getExpyear() {
+		return expyear;
+	}
+
+	public void setExpyear(String expyear) {
+		this.expyear = expyear;
 	}
 
 	

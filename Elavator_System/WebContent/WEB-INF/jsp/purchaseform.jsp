@@ -72,7 +72,7 @@
             <div class='form-row'>
               <div class='form-group card required'>
                   <label class='control-label'>Customer Name</label>
-                <form:input path="customer_name" autocomplete='off' class='form-control' size='20' type='text' id="cname" placeholder="Name" required="required"/>
+                <form:input path="customer_name" autocomplete='off' class='form-control' size='20' type='text' pattern="^[A-Za-z ]+$" id="cname" placeholder="Name" required="required"/>
                 <span id="custname" class="text-danger"></span>
               </div>
             </div>

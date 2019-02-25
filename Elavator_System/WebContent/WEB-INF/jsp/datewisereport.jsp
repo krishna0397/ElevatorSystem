@@ -42,7 +42,7 @@ table,th,td{text-align:center;}
 
      <nav class="navbar navbar-expand navbar-dark static-top" style="background-color: mediumvioletred;">
 
-      <a class="navbar-brand mr-1" href="index.html" style="padding-bottom:33px">Elevator Admin</a>
+      <a class="navbar-brand mr-1" href="#" style="padding-bottom:33px">Elevator Admin</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       </button>
@@ -52,28 +52,29 @@ table,th,td{text-align:center;}
         
         <div class="col-md-4">
       	 <li class="nav-item dropdown no-arrow">
-            <a href="${pageContext.request.contextPath}/adminhome"><i style="color: white; "class="fas fa-home fa-lg"></i></a>
+            <a href="${pageContext.request.contextPath}/adminhome" data-toggle="tooltip" title="Home"><i style="color: white; "class="fas fa-home fa-lg"></i></a>
             </li>
             </div>
         
         <div class="col-md-4">
         <li class="nav-item dropdown no-arrow">
-           <a href="${pageContext.request.contextPath}/adminprofile"><i style="color: white; "class="fas fa-user-circle fa-lg "></i></a>
+           <a href="${pageContext.request.contextPath}/adminprofile" data-toggle="tooltip" title="Profile"><i style="color: white; "class="fas fa-user-circle fa-lg "></i></a>
         </li>
         </div>
          
         
           <div class="col-md-3" style="position:relative;">
         <li class="nav-item dropdown no-arrow" >         
-          <a href="${pageContext.request.contextPath}/cart"><i  style="color: white;" class="fas fa-cart-plus fa-lg" ></i> </a>
+          <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" title="Cart"><i  style="color: white;" class="fas fa-cart-plus fa-lg" ></i>
           </li>
            <span class="badge btn btn-warning"style="position:absolute;right:10px;top:0px;border-radius:10px;color:white;">
            <%List<Item> cart = (List<Item>) session.getAttribute("cart"); out.print(cart.size());%></span>
           </div>
+          </a>
           
         <div class="col-md-4">
         <li align="right"  class="nav-item dropdown no-arrow">
-          <a href="${pageContext.request.contextPath}/adminlogout"><i  style="color: white;" class="fas fa-sign-out-alt fa-lg" ></i> </a>
+          <a href="${pageContext.request.contextPath}/adminlogout" data-toggle="tooltip" title="Logout"><i  style="color: white;" class="fas fa-sign-out-alt fa-lg" ></i> </a>
           </li>
           </div>
           
@@ -93,7 +94,7 @@ table,th,td{text-align:center;}
 	<br>
 	<table class="table table-striped table-hover" align="center" border="2" width="70%" padding="5px">
 		<tr>
-			<th>Order Id</th>
+			<th>Sr.No.</th>
 			<th>Product Id</th>
 			<th>Product Name</th>
 			<th>Cost Price</th>
@@ -133,7 +134,7 @@ table,th,td{text-align:center;}
 				
 			</tr>
 		</c:forEach>
-		<div class="panel col-md-3" style="background-color:aliceblue; color:darkgreen;position:absolute;top:5px;left:10px;height:11%">
+		<div class="panel col-md-3" style="background-color:aliceblue; color:darkgreen;position:absolute;top:5px;left:10px;height:7%">
 		<div >
 		<h4><strong>Total Profit</strong></h4>
 		

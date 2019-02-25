@@ -71,7 +71,7 @@
 
 			<tr>
 				<td></td>
-				<td><input class="btn btn-primary btn-sm btn-success" type="submit" value="Edit Save" /></td>
+				<td><input class="btn btn-primary btn-sm btn-success" type="submit" value="Save" /></td>
 			</tr>
 		</table>
 	</form:form>

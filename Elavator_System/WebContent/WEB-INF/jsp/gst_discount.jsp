@@ -35,9 +35,9 @@
 
   <body id="page-top">
 
-	<nav class="navbar navbar-expand navbar-dark static-top" style="background-color: mediumvioletred">
+	<nav class="navbar navbar-expand navbar-dark static-top" style="background-color: mediumvioletred;">
 
-      <a class="navbar-brand mr-1" href="index.html">Elevator Admin</a>
+      <a class="navbar-brand mr-1" href="#">Elevator Admin</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       </button>
@@ -47,27 +47,35 @@
         
         <div class="col-md-4">
       	 <li class="nav-item dropdown no-arrow">
-            <a href="adminhome"><i style="color: white; "class="fas fa-home fa-lg"></i></a>
+            <a href="${pageContext.request.contextPath}/adminhome" data-toggle="tooltip" title="Home"><i style="color: white; "class="fas fa-home fa-lg"></i></a>
             </li>
             </div>
         
         <div class="col-md-4">
         <li class="nav-item dropdown no-arrow">
-           <a href="adminprofile"><i style="color: white; "class="fas fa-user-circle fa-lg "></i></a>
+           <a href="${pageContext.request.contextPath}/adminprofile" data-toggle="tooltip" title="Profile"><i style="color: white; "class="fas fa-user-circle fa-lg "></i></a>
         </li>
         </div>
+         
         
-        
-        <div class="col-md-2">
+          <div class="col-md-3" style="position:relative;">
+        <li class="nav-item dropdown no-arrow" >         
+          <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" title="Cart"><i  style="color: white;" class="fas fa-cart-plus fa-lg" ></i>
+          </li>
+           <span class="badge btn btn-warning"style="position:absolute;right:10px;top:0px;border-radius:10px;color:white;">
+           <%List<Item> cart = (List<Item>) session.getAttribute("cart"); out.print(cart.size());%></span>
+          </div>
+          </a>
+          
+        <div class="col-md-4">
         <li align="right"  class="nav-item dropdown no-arrow">
-          <a href="adminlogout"><i  style="color: white;" class="fas fa-sign-out-alt fa-lg" ></i> </a>
+          <a href="${pageContext.request.contextPath}/adminlogout" data-toggle="tooltip" title="Logout"><i  style="color: white;" class="fas fa-sign-out-alt fa-lg" ></i> </a>
           </li>
           </div>
         </ul>
       </nav>
-	
+	<br>    
 
-	<br>
 	<div class="row" style="padding:20px;">
 		<div class="col-md-6 container shadow p-3 mb-5 bg-light rounded table table-responsive">
 		<h3>Current GST & DISCOUNT</h3>

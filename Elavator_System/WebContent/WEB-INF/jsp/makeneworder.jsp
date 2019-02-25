@@ -41,7 +41,7 @@ table,th,td{text-align:center;}
 
         <nav class="navbar navbar-expand navbar-dark static-top" style="background-color: mediumvioletred;">
 
-      <a class="navbar-brand mr-1" href="index.html" style="padding-bottom:33px">Elevator Admin</a>
+      <a class="navbar-brand mr-1" href="#" style="padding-bottom:33px">Elevator Admin</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       </button>
@@ -51,28 +51,29 @@ table,th,td{text-align:center;}
         
         <div class="col-md-4">
       	 <li class="nav-item dropdown no-arrow">
-            <a href="${pageContext.request.contextPath}/adminhome"><i style="color: white; "class="fas fa-home fa-lg"></i></a>
+            <a href="${pageContext.request.contextPath}/adminhome" data-toggle="tooltip" title="Home"><i style="color: white; "class="fas fa-home fa-lg"></i></a>
             </li>
             </div>
         
         <div class="col-md-4">
         <li class="nav-item dropdown no-arrow">
-           <a href="${pageContext.request.contextPath}/adminprofile"><i style="color: white; "class="fas fa-user-circle fa-lg "></i></a>
+           <a href="${pageContext.request.contextPath}/adminprofile" data-toggle="tooltip" title="Profile"><i style="color: white; "class="fas fa-user-circle fa-lg "></i></a>
         </li>
         </div>
-        
+         
         
           <div class="col-md-3" style="position:relative;">
         <li class="nav-item dropdown no-arrow" >         
-          <a href="${pageContext.request.contextPath}/cart"><i  style="color: white;" class="fas fa-cart-plus fa-lg" ></i> </a>
+          <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" title="Cart"><i  style="color: white;" class="fas fa-cart-plus fa-lg" ></i>
           </li>
            <span class="badge btn btn-warning"style="position:absolute;right:10px;top:0px;border-radius:10px;color:white;">
            <%List<Item> cart = (List<Item>) session.getAttribute("cart"); out.print(cart.size());%></span>
           </div>
+          </a>
           
         <div class="col-md-4">
         <li align="right"  class="nav-item dropdown no-arrow">
-          <a href="${pageContext.request.contextPath}/adminlogout"><i  style="color: white;" class="fas fa-sign-out-alt fa-lg" ></i> </a>
+          <a href="${pageContext.request.contextPath}/adminlogout" data-toggle="tooltip" title="Logout"><i  style="color: white;" class="fas fa-sign-out-alt fa-lg" ></i> </a>
           </li>
           </div>
           
@@ -80,12 +81,14 @@ table,th,td{text-align:center;}
         </ul>
       </nav>
 	<br>
+
 	<div class="container shadow p-3 mb-5 bg-light rounded table table-responsive">
 	<h1 style="color:blueviolet; font-weight:600;" align="center">Product List</h1><br>
 	<button>Search <i class="fa fa-search"></i></button> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 	<br><br>
 	<table class="table table-striped table-hover " id="myTable" align="center" border="2" width="70%" padding="5px">
 		<tr>
+			<th>Sr.No.</th>
 			<th>Product Id</th>
 			<th>Product Name</th>
 			<th>Product Quantity</th>
@@ -93,8 +96,10 @@ table,th,td{text-align:center;}
 			<th>Order</th>
 		</tr>
 		
+		<% int i=1; %>
 		<c:forEach var="product" items="${list}">
 			<tr>
+				<td><%= i %><% i++; %></td>
 				<td>${product.product_id}</td>
 				<td>${product.product_name}</td>
 				<td>${product.quantity}</td>
@@ -123,9 +128,13 @@ function myFunction() {
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    td1 = tr[i].getElementsByTagName("td")[2];
+    
+    if (td || td1) {
+        txtValue = td.textContent || td.innerText;
+        txtValue1 = td1.textContent || td1.innerText;
+        
+        if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue1.toUpperCase().indexOf(filter) > -1 ) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";

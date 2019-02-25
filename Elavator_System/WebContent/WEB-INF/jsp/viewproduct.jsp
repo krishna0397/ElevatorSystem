@@ -2,6 +2,8 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import="java.util.*"%>
+<%@ page import="com.model.Item"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -35,9 +37,9 @@ table,th,td{text-align:center;}
 
   <body>
 
-    <nav class="navbar navbar-expand navbar-dark static-top" style="background-color: mediumvioletred">
+    <nav class="navbar navbar-expand navbar-dark static-top" style="background-color: mediumvioletred;">
 
-      <a class="navbar-brand mr-1" href="index.html">Elevator Admin</a>
+      <a class="navbar-brand mr-1" href="#">Elevator Admin</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       </button>
@@ -47,25 +49,36 @@ table,th,td{text-align:center;}
         
         <div class="col-md-4">
       	 <li class="nav-item dropdown no-arrow">
-            <a href="adminhome"><i style="color: white; "class="fas fa-home fa-lg"></i></a>
+            <a href="${pageContext.request.contextPath}/adminhome" data-toggle="tooltip" title="Home"><i style="color: white; "class="fas fa-home fa-lg"></i></a>
             </li>
             </div>
         
         <div class="col-md-4">
         <li class="nav-item dropdown no-arrow">
-           <a href="adminprofile"><i style="color: white; "class="fas fa-user-circle fa-lg "></i></a>
+           <a href="${pageContext.request.contextPath}/adminprofile" data-toggle="tooltip" title="Profile"><i style="color: white; "class="fas fa-user-circle fa-lg "></i></a>
         </li>
         </div>
         
         
-        <div class="col-md-2">
+          <div class="col-md-3" style="position:relative;">
+        <li class="nav-item dropdown no-arrow" >         
+          <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" title="Cart"><i  style="color: white;" class="fas fa-cart-plus fa-lg" ></i>
+          </li>
+           <span class="badge btn btn-warning"style="position:absolute;right:10px;top:0px;border-radius:10px;color:white;">
+           <%List<Item> cart = (List<Item>) session.getAttribute("cart"); out.print(cart.size());%></span>
+          </div>
+          </a>
+          
+        <div class="col-md-4">
         <li align="right"  class="nav-item dropdown no-arrow">
-          <a href="adminlogout"><i  style="color: white;" class="fas fa-sign-out-alt fa-lg" ></i> </a>
+          <a href="${pageContext.request.contextPath}/adminlogout" data-toggle="tooltip" title="Logout"><i  style="color: white;" class="fas fa-sign-out-alt fa-lg" ></i> </a>
           </li>
           </div>
+          
+        
         </ul>
       </nav>
-      <br>
+	<br>
       
 	<div class="container shadow p-3 mb-5 bg-light rounded table table-responsive">
 	<h1 style="color:blueviolet" align="center">Product List</h1><br>
@@ -73,6 +86,7 @@ table,th,td{text-align:center;}
 	<br><br>
 	<table class="table table-striped table-hover" id="myTable" align="center" border="2" width="70%" padding="5px">
 		<tr>
+			<th>Sr.No.</th>
 			<th>Id</th>
 			<th>Date</th>
 			<th> Product Type</th>
@@ -83,9 +97,10 @@ table,th,td{text-align:center;}
 			<th>Edit</th>
 			<th>Delete</th>
 		</tr>
-		
+		<% int i=1; %>
 		<c:forEach var="product" items="${list}">
 			<tr>
+				<td><%= i %><% i++; %></td>
 				<td>${product.product_id}</td>
 				<td>${product.date}</td>
 				<td>${product.product_type}</td>
@@ -113,10 +128,13 @@ function myFunction() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[2];
-    if (td) {
+    td = tr[i].getElementsByTagName("td")[1];
+    td1 = tr[i].getElementsByTagName("td")[3];
+
+    if (td || td1) {
       txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      txtValue1 = td1.textContent || td1.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue1.toUpperCase().indexOf(filter) > -1 ) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";

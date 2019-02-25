@@ -55,13 +55,13 @@
 					</div>
 					
 
-					<div class="text-center p-t-136">
-						<a class="txt2" href="regform">
-							Create new Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
-				</form:form>>
+<!-- 					<div class="text-center p-t-136"> -->
+<!-- 						<a class="txt2" href="regform"> -->
+<!-- 							Create new Account -->
+<!-- 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+				</form:form>
 			</div>
 		</div>
 	</div>

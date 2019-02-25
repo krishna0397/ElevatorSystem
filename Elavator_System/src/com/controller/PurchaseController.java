@@ -155,6 +155,7 @@ public class PurchaseController
 			double profit= paidamt-totalcartamt;
 			prdao.update(totalcartamt,paidamt,profit, order_id);
 			
+			cart.removeAll(cart);
 	
 		return "paidsuccess";
 		}

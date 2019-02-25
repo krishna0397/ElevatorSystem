@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+n<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -68,11 +68,10 @@
       </div>
     </div>
 
-    <div class="site-section">
+    <div class="site-section" style="padding-bottom:0px";>
       <div class="container">
 
         <div class="row mb-5">
-          <div class="col-md-9 order-2">
 
             <div class="row">
               <div class="col-md-12 mb-5">
@@ -86,10 +85,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="shop-single.html"><img src="resources/images/cloth_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/cloth_1.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="#">Pneumatic Elevator</a></h3>
+                    <h3 style="color:blue"><a>Pneumatic Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -97,10 +96,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/shoe_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/shoe_1.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="shop-single.html">Resedential Elevator</a></h3>
+                    <h3 style="color:blue"><a>Resedential Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -108,10 +107,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/cloth_2.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/cloth_2.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="shop-single.html">Passenger Elevator</a></h3>
+                    <h3 style="color:blue"><a>Passenger Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -120,10 +119,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/cloth_3.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/cloth_3.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="#">Freight Elevator</a></h3>
+                    <h3 style="color:blue"><a>Freight Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -131,10 +130,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/cloth_4.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/cloth_4.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="#">Climbing Elevator</a></h3>
+                    <h3 style="color:blue"><a>Climbing Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -142,10 +141,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="#"><img height="20px" src="resources/images/elevator1.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img height="20px" src="resources/images/elevator1.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="shop-single.html">Elevators</a></h3>
+                    <h3 style="color:blue"s><a>Elevators</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -153,10 +152,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/cap1.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/cap1.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="shop-single.html">Traction Elevator</a></h3>
+                    <h3 style="color:blue"><a>Traction Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -164,10 +163,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/hydraulic-elevator.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/hydraulic-elevator.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="#">Hydraulic Elevator</a></h3>
+                    <h3 style="color:blue"><a>Hydraulic Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -176,10 +175,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border"  style="padding-bottom:35px;">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/elevator.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/elevator.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="#">Elevator</a></h3>
+                    <h3 style="color:blue"><a>Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -187,10 +186,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/W-PushButtonsHome.png" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/W-PushButtonsHome.png" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="shop-single.html">Push Button Home Elevator</a></h3>
+                    <h3 style="color:blue"><a>Push Button Home Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -198,10 +197,10 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border" style="padding-bottom:4px;">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/hero_1.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/hero_1.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="#">Elevator</a></h3>
+                    <h3 style="color:blue"><a>Elevator</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
@@ -210,25 +209,22 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                 <div class="block-4 text-center border">
                   <figure class="block-4-image">
-                    <a href="#"><img src="resources/images/escalator.jpg" alt="Image placeholder" class="img-fluid"></a>
+                    <a><img src="resources/images/escalator.jpg" alt="Image placeholder" class="img-fluid"></a>
                   </figure>
                   <div class="block-4-text p-4">
-                    <h3><a href="#">Escalators</a></h3>
+                    <h3 style="color:blue"><a>Escalators</a></h3>
                     <p class="mb-0">Finding perfect products</p>
                   </div>
                 </div>
               </div>
 
-
-        
-
 <footer class="site-footer border-top">
       <div class="container">
         <div class="row">
           
-          <div class="col-md-6 col-lg-6 mb-4 mb-lg-0">
-            <h3 class="footer-heading mb-4"></h3><br>
-            <a href="#" class="block-6">
+          <div class="col-md-6">
+            <h3 class="footer-heading "></h3><br>
+            <a  class="block-6">
               <img src="resources/images/hero_1.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
               
             </a>
@@ -238,7 +234,7 @@
               <h3 class="footer-heading mb-4"><br><br>Contact Info</h3><br>
               <ul class="list-unstyled">
                <li class="address">203 Elevators System, 2nd lane,Kothrud,Pune,India</li>
-                <li class="phone"><a href="tel://23923929210">+91 9875 929 210</a></li>
+                <li class="phone"><a href="#">+91 9875 929 210</a></li>
                 <li class="email">elevatorsystem@gmail.com</li>
               </ul>
             </div>
@@ -248,7 +244,6 @@
       </div>
     </footer>
 
-  </div>
 
   <script src="resources/js/jquery-3.3.1.min.js"></script>
   <script src="resources/js/jquery-ui.js"></script>

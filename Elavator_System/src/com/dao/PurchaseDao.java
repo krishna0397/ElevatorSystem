@@ -37,14 +37,14 @@ public class PurchaseDao
 		
 		public int saveCredit(CreditCardPayment cc) {
 
-			String query = "insert into credit_card(order_id,creditcardno,expdate,creditcvv,creditname) values(?,?,?,?,?)";
-			return template.update(query,cc.getOrder_id(),cc.getCreditcardno(),cc.getExpdate(),cc.getCreditcvv(),cc.getCreditname()); 
+			String query = "insert into credit_card(order_id,creditcardno,expdate,expyear,creditcvv,creditname) values(?,?,?,?,?,?)";
+			return template.update(query,cc.getOrder_id(),cc.getCreditcardno(),cc.getExpdate(),cc.getExpyear(),cc.getCreditcvv(),cc.getCreditname()); 
 		}
 		
 		public int saveDebit(DebitCardPayment dc) {
 
-			String query = "insert into debit_card(order_id,debitcardno,expdate,debitcvv,debitname) values(?,?,?,?,?)";
-			return template.update(query,dc.getOrder_id(),dc.getDebitcardno(),dc.getExpdate(),dc.getDebitcvv(),dc.getDebitname()); 
+			String query = "insert into debit_card(order_id,debitcardno,expdate,expyear,debitcvv,debitname) values(?,?,?,?,?,?)";
+			return template.update(query,dc.getOrder_id(),dc.getDebitcardno(),dc.getExpdate(),dc.getExpyear(),dc.getDebitcvv(),dc.getDebitname()); 
 		}
 		
 		public int saveCheque(ChequePayment ch) {

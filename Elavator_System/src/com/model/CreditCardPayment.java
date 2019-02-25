@@ -6,6 +6,7 @@ public class CreditCardPayment {
 	private int order_id;
 	private String creditcardno;
 	private String expdate;
+	private String expyear;
 	private String creditcvv;
 	private String creditname;
 	
@@ -59,6 +60,14 @@ public class CreditCardPayment {
 
 	public void setExpdate(String expdate) {
 		this.expdate = expdate;
+	}
+
+	public String getExpyear() {
+		return expyear;
+	}
+
+	public void setExpyear(String expyear) {
+		this.expyear = expyear;
 	}
 
 	

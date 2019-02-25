@@ -40,7 +40,7 @@
 			
 			<tr>
 				<td>Employee Name :</td>
-				<td><form:input path="employee_name" id="ename" class="form-control" required="required" />
+				<td><form:input path="employee_name" id="ename" class="form-control" pattern="^[A-Za-z ]+$" required="required" />
 				<span id="empname" class="text-danger"></span>
 				</td>
 			</tr>
@@ -78,7 +78,7 @@
 
 			<tr>
 				<td></td>
-				<td><input class="btn btn-primary btn-sm btn-success" type="submit" value="Edit Save" /></td>
+				<td><input class="btn btn-primary btn-sm btn-success" type="submit" value="Save" /></td>
 			</tr>
 		</table>
 	</form:form>

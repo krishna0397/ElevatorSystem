@@ -59,15 +59,23 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-7 col-md-7">
+                            <div class="col-xs-4 col-md-4">
                                 <div class="form-group">
-                                    <label><span class="hidden-xs">EXPIRATION DATE</span></label>
-                                    <form:input path="expdate" type="text" maxlength='7' class="form-control" placeholder="MM / YY" pattern="(?:0[1-9]|1[0-2])/[0-9]{2}" required="required"/>
+                                    <label><span class="hidden-xs">EXP MONTH</span></label>
+                                    <form:input path="expdate" type="text" maxlength='2' class="form-control" placeholder="MM" pattern="(0[1-9]|1[012])" required="required"/>
                                 </div>
                             </div>
-                            <div class="col-xs-5 col-md-5 pull-right">
+                            
+                            <div class="col-xs-4 col-md-4">
                                 <div class="form-group">
-                                    <label>CV CODE</label>
+                                    <label><span class="hidden-xs">EXP YEAR</span></label>
+                                    <form:input path="expyear" type="text" maxlength='4' id="year" class="form-control" placeholder="YY" required="required" onchange="return validate()"/>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xs-4 col-md-4">
+                                <div class="form-group">
+                                    <label>CVC CODE</label>
                                     <form:input path="creditcvv" type="password" minlength='3' maxlength='3' pattern="[0-9]{3}" class="form-control" placeholder="CVC" required="required"/>
                                 </div>
                             </div>
@@ -124,6 +132,9 @@
 		{
 			return (key>='0' && key<='9')
 		}
+		
+		
+		
 	</script>
 </body>
 </html>

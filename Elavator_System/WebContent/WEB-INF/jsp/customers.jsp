@@ -57,7 +57,7 @@
 
     <nav class="navbar navbar-expand navbar-dark static-top" style="background-color: mediumvioletred">
 
-      <a class="navbar-brand mr-1" href="index.html">Elevator Admin</a>
+      <a class="navbar-brand mr-1" href="#">Elevator Admin</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       </button>
